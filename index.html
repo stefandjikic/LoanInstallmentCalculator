@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Kalkulator Kredita</title>
+</head>
+<body class="bg-gray">
+  <div class="container">
+    <div class="card bg-light">
+      <h1 id="heading" class="pb-2">Kalkulator rate kredita</h1>
+      <form id="loan-form">
+        <div class="form-group pb-1">
+          <span><i class="fas fa-euro-sign"></i></span>
+          <input type="number" id="amount" placeholder="Iznos kredita">
+        </div>
+        <div class="form-group pb-1">
+          <span><i class="fas fa-percent"></i></span>
+          <input type="number" id="interest" placeholder="Kamatna stopa">
+        </div>
+        <div class="form-group pb-1">
+          <span><i class="far fa-calendar-alt"></i></span>
+          <input type="number" id="deadline" placeholder="Rok otplate (godine)">
+        </div>
+        <div class="form-group pb-1">
+          <input type="submit" value="Izračunaj">
+        </div>
+      </form>
+      <!-- Loading -->
+      <div id="loading">
+        <img src="img/loading.gif" alt="">
+      </div>
+      <!-- Rezultat -->
+      <div id="results" class="pt-2">
+        <h3 class="pb-1">Rezultat</h3>
+        <div class="form-group pb-1">
+          <span class="span-big">Mesečna rata</span>
+          <input type="number" id="monthly-payment" disabled>
+        </div>
+        <div class="form-group pb-1">
+          <span class="span-big">Klijent ukupno vraća</span>
+          <input type="number" id="total-payment" disabled>
+        </div>
+        <div class="form-group pb-1">
+          <span class="span-big">Ukupna kamata</span>
+          <input type="number" id="total-interest" disabled>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
